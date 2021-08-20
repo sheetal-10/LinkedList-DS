@@ -9,16 +9,12 @@ package com.ds.linkedlist;
 public class Main {
 	public static void main(String[] args) {
 		
-		
-		  System.out.println("Program for the Simple Linked List");
-		  
 		  LinkedList linkedList=new LinkedList();
-			linkedList.insert(56);
-			linkedList.insert(30);
-			linkedList.insert(70);
-			System.out.println("LinkList:");
-			linkedList.print();	
-			}
+		  LinkedList.Node prevNode = linkedList.insert(56);
+		  linkedList.insertAfter(prevNode, 30); 
+		  linkedList.print();	
 	}
+}
+
 
 

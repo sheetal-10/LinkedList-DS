@@ -27,7 +27,7 @@ public class LinkedList {
 		}
 			
 	//method of appending data 
-	public void insert(int data) {
+	public Node insert(int data) {
 		Node newNode = new Node(data);
 		if (head==null) {
 			head = newNode; //storing data in head
@@ -38,6 +38,7 @@ public class LinkedList {
 			}
 			temp.next = newNode;
 		}
+		return newNode;
 	}
 	
 	// method to display inserted data
@@ -48,6 +49,18 @@ public class LinkedList {
 			temp = temp.next;
 		}
 		System.out.println();
+	}
+	
+	// method to insert after a node
+	public void insertAfter(Node prevNode, int value) {
+
+		if (prevNode == null) {
+		System.out.println("Prev Node should not be null");
+		return;
+		}				
+		Node newNode = new Node(value);
+		newNode.next = prevNode.next;
+		prevNode.next = newNode;
 	}
 }
 
