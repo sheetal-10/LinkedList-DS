@@ -12,12 +12,13 @@ public class Main {
 		
 		  System.out.println("Program for the Simple Linked List");
 		  
-		  LinkedList LinkedList = new LinkedList(); //Object 
-		  //inserting Elements
-		  LinkedList.insert(56); 
-		  LinkedList.insert(30); 
-		  LinkedList.insert(70);
-		 
+		  LinkedList linkedList=new LinkedList();
+			linkedList.push(56);
+			linkedList.push(30);
+			linkedList.push(70);
+			System.out.println("LinkList:");
+			linkedList.print();	
+			}
 	}
 
-}
+
