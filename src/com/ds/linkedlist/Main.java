@@ -12,12 +12,10 @@ public class Main {
 		  LinkedList linkedList=new LinkedList();
 		  linkedList.insert(56);
 		  linkedList.insert(30);
-	      linkedList.insert(70);
+	      	  linkedList.insert(70);
 		  linkedList.print();
-		  
-		  linkedList.deleteLast();
-			
-		  linkedList.print();	
+		  linkedList.searchNode(30);
+
 	}
 }
 
