@@ -62,5 +62,16 @@ public class LinkedList {
 		newNode.next = prevNode.next;
 		prevNode.next = newNode;
 	}
+	
+	//method to delete a data
+	public int pop() {
+		int popData = 0;
+		if (head == null) {
+		System.out.println("Stack Over flow");
+		}
+		popData = head.data;
+		head = head.next;
+		return popData;
+		}
 }
 

@@ -10,8 +10,14 @@ public class Main {
 	public static void main(String[] args) {
 		
 		  LinkedList linkedList=new LinkedList();
-		  LinkedList.Node prevNode = linkedList.insert(56);
-		  linkedList.insertAfter(prevNode, 30); 
+		  linkedList.insert(56);
+		  linkedList.insert(30);
+	      linkedList.insert(70);
+		  linkedList.print();
+		  
+		  int pop = linkedList.pop();
+		  System.out.println(pop);
+			
 		  linkedList.print();	
 	}
 }
