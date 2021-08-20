@@ -15,8 +15,7 @@ public class Main {
 	      linkedList.insert(70);
 		  linkedList.print();
 		  
-		  int pop = linkedList.pop();
-		  System.out.println(pop);
+		  linkedList.deleteLast();
 			
 		  linkedList.print();	
 	}

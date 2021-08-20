@@ -41,15 +41,7 @@ public class LinkedList {
 		return newNode;
 	}
 	
-	// method to display inserted data
-	public void print() {
-		Node temp = head;
-		while(temp!=null) {
-			System.out.print(temp.data+"->");
-			temp = temp.next;
-		}
-		System.out.println();
-	}
+	
 	
 	// method to insert after a node
 	public void insertAfter(Node prevNode, int value) {
@@ -63,7 +55,7 @@ public class LinkedList {
 		prevNode.next = newNode;
 	}
 	
-	//method to delete a data
+	//method to delete a element
 	public int pop() {
 		int popData = 0;
 		if (head == null) {
@@ -73,5 +65,33 @@ public class LinkedList {
 		head = head.next;
 		return popData;
 		}
+	//method to delete the last element
+	public void deleteLast() {
+		if (head==null) {
+			System.out.println("Sequence have no elements");
+		} else if (head.next==null) {
+			head=null;
+			System.out.println("After deleting last Element, Sequence have no elements");
+		} else {
+			Node lastSecond = head;
+			while(lastSecond.next.next!=null) {
+				lastSecond=lastSecond.next;//Traversing the last Second element
+			}
+			lastSecond.next=null;
+			System.out.println("After deleting last Element");
+		}
+	}
+	
+	
+	//  Printing the Node value by traversing 
+	public void print() {
+		System.out.print("The sequence is : ");
+		Node temp = head; //Initializing temp
+		while (temp!=null) {
+			System.out.print(temp.data+" -> "); //Printing data
+			temp=temp.next;//Traversing temp to next
+		}
+		System.out.println("\n");
+	}
 }
 
