@@ -26,12 +26,7 @@ public class LinkedList {
 				}
 		}
 			
-	/**
-	  * Method to insert data into linked list
-	  * To check if head is null then add data to it
-	  * If not then checks for other nodes for null to add data
-   	  * @param data
-	  */
+	//method of appending data 
 	public void insert(int data) {
 		Node newNode = new Node(data);
 		if (head==null) {
@@ -45,12 +40,6 @@ public class LinkedList {
 		}
 	}
 	
-	//method to push
-	public void push(int data) {
-		Node newNode = new Node(data);
-		newNode.next = head;
-		head = newNode;
-			 }
 	// method to display inserted data
 	public void print() {
 		Node temp = head;
